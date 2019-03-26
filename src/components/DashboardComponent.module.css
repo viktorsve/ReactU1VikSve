@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+}
+
+.toggle {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  pointer-events: none;
+}
