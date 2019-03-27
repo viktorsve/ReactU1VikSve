@@ -6,7 +6,6 @@ import styles from './WrapperComponent.module.css';
 class WrapperComponent extends Component {
   state = {
     showComponent: true,
-    hover: false
   }
 
   showComponent = () => {
@@ -15,15 +14,9 @@ class WrapperComponent extends Component {
     }))
   }
 
-  hoverFunction = () => {
-    this.setState(prevState => ({
-      hover: !prevState.hover
-    }))
-  }
-
   render() {
     return (
-      <Card onMouseEnter={this.hoverFunction} onMouseLeave={this.hoverFunction} className={`${this.state.hover ? "shadow-lg" : "shadow"} ${styles.card}`}>
+      <Card className={styles.card}>
         <Card.Body>
           {this.state.showComponent ? (
             <Fragment>
