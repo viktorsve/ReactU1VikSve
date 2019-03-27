@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
+import ListGroup from 'react-bootstrap/ListGroup';
 import styles from './DashboardComponent.module.css';
 import UserComponent from './UserComponent';
 import WrapperComponent from './WrapperComponent';
@@ -39,8 +40,10 @@ class DashboardComponent extends Component {
       <Container>
         <Row className="justify-content-center">
           <WrapperComponent>
-            <UserComponent users={this.state.users} color={this.state.color}/>
-            <Button variant="info" onClick={this.toggleColor} className={styles.toggle}>Toggle Colors</Button>
+            <ListGroup as="ul">
+              <UserComponent users={this.state.users} color={this.state.color}/>
+            </ListGroup>
+              <Button variant="info" onClick={this.toggleColor} className={styles.toggle}>Toggle Colors</Button>
           </WrapperComponent>
           <WrapperComponent>
             <Form onSubmit={this.addUser}>

@@ -31,9 +31,9 @@ class WrapperComponent extends Component {
             </Fragment>
           ) : null }
           <hr/>
-        <Button onClick={this.showComponent} variant="info">Show content</Button>
-      </Card.Body>
-    </Card>
+          <Button onClick={this.showComponent} variant="info">Show content</Button>
+        </Card.Body>
+      </Card>
     );
   }
 }
