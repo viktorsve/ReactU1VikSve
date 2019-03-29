@@ -1,8 +1,8 @@
 .card {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  height: 100%;
   margin: 50px;
   width: 20rem;
-  height: 100%;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
 .card:hover {

@@ -8,6 +8,12 @@ import styles from './DashboardComponent.module.css';
 import UserComponent from './UserComponent';
 import WrapperComponent from './WrapperComponent';
 
+/*
+Our main component used for storing our list of users as a state that will be sent
+to our other components as an attribute. Also handles the color state which will
+toggle the color of our list items. The form that is rendered in this component
+will update the users state.
+*/
 class DashboardComponent extends Component {
   state = {
     users: ["pelle", "kalle"],
@@ -15,20 +21,24 @@ class DashboardComponent extends Component {
     color: true
   }
 
+  // Updates the value state to the value of the event that is passed as an argument
   handleChange = event => {
     this.setState({ value: event.target.value });
   };
 
+  // Updates the users list in state and adds the key value of value to the end of the list. Also resets value in state.
   addUser = event => {
     event.preventDefault()
     this.setState(prevState => ({ users: [...prevState.users, prevState.value]}))
     this.setState({ value: ""})
   }
 
+  // Updates the users list in state and removes the last item in the list
   removeUser = () => {
     this.setState(prevState => ({ users: prevState.users.slice(0, prevState.users.length - 1)}))
   }
 
+  // Updates the key value of color to the opposite boolean value
   toggleColor = () => {
     this.setState(prevState => ({
       color: !prevState.color
