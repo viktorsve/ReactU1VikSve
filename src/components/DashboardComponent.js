@@ -9,8 +9,8 @@ import UserComponent from './UserComponent';
 import WrapperComponent from './WrapperComponent';
 
 /*
-Our main component used for storing our list of users as a state that will be sent
-to our other components as an attribute. Also handles the color state which will
+Our main component used for storing our list of users as a state that will be passed
+to our other components as props. Also handles the color state which will
 toggle the color of our list items. The form that is rendered in this component
 will update the users state.
 */
