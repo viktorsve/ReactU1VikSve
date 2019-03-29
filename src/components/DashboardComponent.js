@@ -21,7 +21,7 @@ class DashboardComponent extends Component {
     color: true
   }
 
-  // Updates the value state to the value of the event that is passed as an argument
+  // Updates value state to the current value of the event object that is passed as an argument
   handleChange = event => {
     this.setState({ value: event.target.value });
   };

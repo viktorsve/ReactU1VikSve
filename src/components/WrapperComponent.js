@@ -13,7 +13,7 @@ class WrapperComponent extends Component {
     showComponent: true,
   }
 
-  // Updates the key value of showComponent in state to the opposite boolean value
+  // Updates the key value of showComponent to the opposite boolean value
   showComponent = () => {
     this.setState(prevState => ({
       showComponent: !prevState.showComponent
