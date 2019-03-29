@@ -26,7 +26,10 @@ class DashboardComponent extends Component {
     this.setState({ value: event.target.value });
   };
 
-  // Updates the users list in state and adds the key value of value to the end of the list. Also resets value in state.
+  /*
+  Prevents the default behavior of the element. Updates the users list in state
+  and adds the key value of value to the end of the list. Also resets value in state.
+  */
   addUser = event => {
     event.preventDefault()
     this.setState(prevState => ({ users: [...prevState.users, prevState.value]}))
