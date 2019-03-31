@@ -10,8 +10,8 @@ props.
 const UserComponent = props => {
   return (
     <Fragment>
-      {props.users.map(user => (
-        <ListGroup.Item as="li" key={user} className={props.color ? styles.blue : styles.red}>
+      {props.users.map((user, i) => (
+        <ListGroup.Item as="li" key={i} className={props.color ? styles.blue : styles.red}>
           {user}
         </ListGroup.Item>
       ))}
