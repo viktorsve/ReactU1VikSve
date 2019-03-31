@@ -4,10 +4,10 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 /*
 Component used for rendering all the list items in the users list that is passed here
-as a prop. The text color of the list items will depend on which value it gets from
+as a prop. The text color of the list items will depend on the value it gets from
 props.
 */
-const UserComponent = (props) => {
+const UserComponent = props => {
   return (
     <Fragment>
       {props.users.map(user => (

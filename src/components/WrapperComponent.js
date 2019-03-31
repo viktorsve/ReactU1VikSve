@@ -20,6 +20,7 @@ class WrapperComponent extends Component {
     }))
   }
 
+  // Lifecycle method that render our JSX code into the DOM
   render() {
     return (
       <Card className={styles.card}>

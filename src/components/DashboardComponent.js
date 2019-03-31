@@ -9,10 +9,10 @@ import UserComponent from './UserComponent';
 import WrapperComponent from './WrapperComponent';
 
 /*
-Our main component used for storing our list of users as a state that will be passed
-to our other components as a prop. Also handles the color state which will
-toggle the color of our list items. The form that is rendered in this component
-will update the users list in state.
+Our main container component used for storing our list of users as a state that
+will be passed to our other components as props. Also handles the color state
+which will toggle the color of our list items. The form that is rendered in this
+component will update the users list in state.
 */
 class DashboardComponent extends Component {
   state = {
@@ -48,6 +48,7 @@ class DashboardComponent extends Component {
     }))
   }
 
+  // Lifecycle method that render our JSX code into the DOM
   render() {
     return (
       <Container>
