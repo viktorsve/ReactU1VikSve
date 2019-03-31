@@ -23,7 +23,9 @@ class DashboardComponent extends Component {
 
   // Updates value state to the current value of the event object that is passed as an argument
   handleChange = event => {
-    this.setState({ value: event.target.value });
+    this.setState({
+      value: event.target.value
+    });
   };
 
   /*
@@ -32,13 +34,19 @@ class DashboardComponent extends Component {
   */
   addUser = event => {
     event.preventDefault()
-    this.setState(prevState => ({ users: [...prevState.users, prevState.value]}))
-    this.setState({ value: ""})
+    this.setState(prevState => ({
+      users: [...prevState.users, prevState.value]
+    }))
+    this.setState({
+      value: ""
+    })
   }
 
   // Updates the users list in state and removes the last item in the list
   removeUser = () => {
-    this.setState(prevState => ({ users: prevState.users.slice(0, prevState.users.length - 1)}))
+    this.setState(prevState => ({
+      users: prevState.users.slice(0, prevState.users.length - 1)
+    }))
   }
 
   // Updates the key value of color to the opposite boolean value
