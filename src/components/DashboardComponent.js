@@ -57,7 +57,7 @@ class DashboardComponent extends Component {
             <ListGroup as="ul">
               <UserComponent users={this.state.users} color={this.state.color}/>
             </ListGroup>
-              <Button variant="info" onClick={this.toggleColor} className={styles.toggle}>Toggle Colors</Button>
+            <Button variant="info" onClick={this.toggleColor} className={styles.toggle}>Toggle Colors</Button>
           </WrapperComponent>
           <WrapperComponent>
             <Form onSubmit={this.addUser}>
